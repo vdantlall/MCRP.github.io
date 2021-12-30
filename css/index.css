@@ -1,0 +1,142 @@
+/*Slideshow div*/
+.slideshow {
+    /*Keeps slideshow images uniform when size changes*/
+    height: 45vw;
+    /*Prevents images from covering body*/
+    overflow: hidden;
+    /*Adds bottom border*/
+    border-bottom: solid 1px rgb(182, 177, 177);
+    min-width: 1100px;
+}
+
+/*Slideshow images*/
+.slideshow-img {
+    /*Slideshow animation*/
+    animation: fade 8s infinite;
+}
+
+/*Slideshow animation*/
+@keyframes fade {
+    0% {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 60%;
+        transform: scale(1.1);
+    }
+    99% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+    }
+}
+
+/*!!!NEEDS WORK!!!*/
+.nav-menu h3{
+    font-size: 1.1rem;
+    margin-right: 2vw;
+    display: inline;
+}
+.nav-menu h2 {
+    color: rgb(235, 226, 226);
+    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.nav-menu h2, .nav-menu h3 {
+    text-align: center;
+    width: 100%;
+}
+.nav-menu {
+    border: solid 1px rgb(235, 226, 226);
+    border-radius: 2vh;
+    overflow: hidden;
+    position: absolute;
+    background-color:rgb(39, 37, 37);
+    box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.781);
+    z-index: 98;
+    text-align: center;
+    top: 50%;
+    left: 50vw;
+    transform: translate(-50%, -75%);
+    width: 40%;
+    height: 170px;
+}
+
+main {
+    position: sticky;
+    vertical-align: top;
+}
+
+/*Sets properties of the start-where div*/
+.start-where {
+    color:rgb(235, 226, 226);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.start-where a {
+    text-decoration: underline;
+}
+
+.start-where h1 {
+    font-size: 1.66em
+}
+
+.start-where p, .info p {
+    font-size: 1em;
+}
+
+.aboutus {
+    margin-left: 15px;
+}
+
+.info {
+    color:rgb(235, 226, 226);
+}
+
+.info p {
+    margin-left: 30px;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+@media (max-width: 1100px) {
+    .slideshow {
+        height: 35em;
+    }
+    main {
+        overflow: hidden;
+    }
+    .slideshow img {
+        transform: translateX(-50%);
+        position: absolute;
+    }
+    .nav-menu {
+        height: 35%;
+        padding-right: 15px;
+        padding-left: 15px;
+        top: 300px;
+    }
+    .nav-menu h3 {
+        display: block;
+        font-size: 1rem;
+    }
+    .nav-menu h2 {
+        font-size: 1.2rem;
+    }
+    .aboutus {
+        margin-left: 0;
+    }
+    .info p {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
